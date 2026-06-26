@@ -4,10 +4,6 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-os.environ.setdefault("TWILIO_ACCOUNT_SID", "AC8be527804c7ea9fff19a401a06c53f44")
-os.environ.setdefault("TWILIO_AUTH_TOKEN",  "dd9d0ae6e6b8b3b6866504066ebd08b0")
-os.environ.setdefault("TWILIO_FROM",        "+19516418619")
-os.environ.setdefault("TWILIO_TO_TEST",     "+491758847709")
 
 from src.fetch_rules import fetch_rules
 from src.assess import load_partners, assess_portfolio
@@ -52,15 +48,16 @@ def main() -> None:
     print(f"\n[4/4] Sending alert -> {demo['company']} / {demo['product']}")
     sid = send_alert(demo) if demo else None
 
+    to_number = os.environ.get("TWILIO_TO_TEST", "<TWILIO_TO_TEST>")
     print(SEPARATOR)
     if sid:
         print(f"  ALERT SENT   SID : {sid}")
-        print(f"  To           : +491758847709")
+        print(f"  To           : {to_number}")
         print(f"  Message      : {demo['alert']['message']}")
     else:
         print(f"  ALERT (offline fallback -- pre-verified live send)")
         print(f"  SID          : {OFFLINE_SID}")
-        print(f"  To           : +491758847709")
+        print(f"  To           : {to_number}")
         print(f"  Message      : RideVolt: your e-Scooter Battery Pack 280Wh needs")
         print(f"                 EU Battery Regulation 2023/1542 by 18 Feb 2027.")
         print(f"  Verify at    : console.twilio.com -> Messaging -> Logs")
