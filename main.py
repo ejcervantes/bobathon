@@ -1,19 +1,8 @@
-"""Regulatory Radar — main pipeline entry point.
-
-Run:
-    python main.py
-
-Requires a .env file with:
-    TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_FROM, TWILIO_TO_TEST
-"""
+"""Regulatory Radar — main pipeline entry point."""
 import json
-from dotenv import load_dotenv
-
 from src.fetch_rules import fetch_rules
 from src.assess import load_partners, assess_portfolio
 from src.alert import send_alert
-
-load_dotenv()
 
 
 def main() -> None:
@@ -41,16 +30,21 @@ def main() -> None:
         json.dump(findings, f, indent=2, ensure_ascii=False)
     print(f"\n📄 Findings written to {output_path}")
 
-    # ── Step 4: Send alerts ──────────────────────────────────────────────────
-    print("\n📡 Sending alerts...")
+    # ── Step 4: Send ONE demo alert (highest-severity finding only) ──────────
+    print("\n📡 Sending demo alert (1 SMS — highest priority gap)...")
+    demo_finding = findings[0] if findings else None
     alerts_sent = 0
-    for finding in findings:
-        sid = send_alert(finding)
+    if demo_finding:
+        sid = send_alert(demo_finding)
         if sid:
             alerts_sent += 1
+            print(f"   Demo alert fired for: {demo_finding['company']} / {demo_finding['product']}")
+    else:
+        print("   No findings to alert on.")
 
     # ── Summary ───────────────────────────────────────────────────────────────
-    print(f"\n✅ Done. {len(findings)} gaps found, {alerts_sent} alerts attempted.")
+    print(f"\n✅ Done. {len(findings)} gaps found in findings.json, {alerts_sent} alert sent.")
+    print("   💡 To send all alerts, change main.py to loop over all findings.")
 
 
 if __name__ == "__main__":

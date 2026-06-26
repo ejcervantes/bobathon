@@ -1,0 +1,200 @@
+[
+  {
+    "company": "HomePulse Smart GmbH",
+    "partner_id": "P005",
+    "product_id": "P005-B",
+    "product": "HomeHub Controller",
+    "regulation": "RED Directive 2014/53/EU - common charger (Art. 3(4), Del. Reg. 2022/2380)",
+    "requirement": "Radio-enabled consumer electronics must use a USB-C charging port; micro-USB is no longer permitted.",
+    "source_url": "https://eur-lex.europa.eu/eli/reg_del/2022/2380/oj",
+    "gap": "HomeHub Controller is a radio-enabled consumer device with a micro-USB charging port; USB-C is mandatory since 28 Dec 2024 under RED Del. Reg (EU) 2022/2380.",
+    "deadline": "2024-12-28",
+    "severity": "high",
+    "recommended_action": "Redesign the charging port to USB-C and re-certify under RED before placing new stock on the EU market.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "HomePulse: your HomeHub Controller needs RED Directive 2014/53/EU by 28 Dec 2024. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "FitTrack Wearables AB",
+    "partner_id": "P006",
+    "product_id": "P006-A",
+    "product": "PulseBand Activity Tracker",
+    "regulation": "REACH Regulation (EC) 1907/2006 - Annex XVII restriction (PFHxA group)",
+    "requirement": "Products with PFHxA-group coatings above 0.1% w/w must not be placed on the EU market.",
+    "source_url": "https://echa.europa.eu/candidate-list-table",
+    "gap": "PulseBand Activity Tracker contains the PFAS/PFHxA group substance above 0.1% w/w, which is restricted under the REACH SVHC Candidate List.",
+    "deadline": "2027-03-15",
+    "severity": "high",
+    "recommended_action": "Remove the PFHxA-based coating or reformulate below 0.1% w/w and notify ECHA.",
+    "alert": {
+      "channel": "sms",
+      "to": "<your-test-number>",
+      "message": "FitTrack: your PulseBand Activity Tracker needs REACH Regulation (EC) 1907/2006 by 15 Mar 2027. Source: echa.europa.eu"
+    }
+  },
+  {
+    "company": "PlayBright Toys S.r.l.",
+    "partner_id": "P008",
+    "product_id": "P008-A",
+    "product": "RoboPup Interactive Toy",
+    "regulation": "Toy Safety Directive revision - stricter phthalate/DEHP limits for toy electronics",
+    "requirement": "Toy electronics must not contain DEHP above tightened phthalate limits for children's products.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065",
+    "gap": "RoboPup Interactive Toy is a toy_electronic containing DEHP above 0.1% w/w, in violation of RoHS Annex II and REACH Annex XVII toy restrictions.",
+    "deadline": "2027-09-01",
+    "severity": "high",
+    "recommended_action": "Reformulate soft plastics to remove DEHP below 0.1% w/w and re-test before next production run.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "PlayBright: your RoboPup Interactive Toy needs Toy Safety Directive revision by 1 Sep 2027. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "PlayBright Toys S.r.l.",
+    "partner_id": "P008",
+    "product_id": "P008-B",
+    "product": "SingAlong Karaoke Mic",
+    "regulation": "Toy Safety Directive revision - stricter phthalate/DEHP limits for toy electronics",
+    "requirement": "Toy electronics must not contain DEHP above tightened phthalate limits for children's products.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065",
+    "gap": "SingAlong Karaoke Mic is a toy_electronic containing DEHP above 0.1% w/w, in violation of RoHS Annex II and REACH Annex XVII toy restrictions.",
+    "deadline": "2027-09-01",
+    "severity": "high",
+    "recommended_action": "Reformulate soft plastics to remove DEHP below 0.1% w/w and re-test before next production run.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "PlayBright: your SingAlong Karaoke Mic needs Toy Safety Directive revision by 1 Sep 2027. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "DisplayOne Visuals GmbH",
+    "partner_id": "P010",
+    "product_id": "P010-B",
+    "product": "Legacy CCFL Panel (spare)",
+    "regulation": "RoHS Directive 2011/65/EU - Annex II review (mercury restriction)",
+    "requirement": "EEE containing mercury above 0.1% w/w must be reformulated; legacy exemptions are lapsing.",
+    "source_url": "https://eur-lex.europa.eu/eli/dir/2011/65/oj",
+    "gap": "Legacy CCFL Panel (spare) contains mercury above the 0.1% w/w RoHS threshold; no current exemption covers this use.",
+    "deadline": "2027-07-22",
+    "severity": "high",
+    "recommended_action": "Reformulate or discontinue the product; no new EEE containing mercury above threshold may be placed on the EU market.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "DisplayOne: your Legacy CCFL Panel (spare) needs RoHS Directive 2011/65/EU by 22 Jul 2027. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "RideVolt Mobility GmbH",
+    "partner_id": "P013",
+    "product_id": "P013-A",
+    "product": "e-Scooter Battery Pack 280Wh",
+    "regulation": "EU Battery Regulation (EU) 2023/1542 - battery passport (Art. 77)",
+    "requirement": "LMT batteries must carry a digital battery passport (QR + data carrier).",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "gap": "e-Scooter Battery Pack 280Wh is an LMT battery sold in the EU with no digital battery passport or QR/data carrier, as required by Art. 77 of Reg (EU) 2023/1542.",
+    "deadline": "2027-02-18",
+    "severity": "high",
+    "recommended_action": "Create the EU battery passport (QR + data carrier) and link it before the 2027-02-18 deadline.",
+    "alert": {
+      "channel": "sms",
+      "to": "<your-test-number>",
+      "message": "RideVolt: your e-Scooter Battery Pack 280Wh needs EU Battery Regulation (EU) 2023/1542 by 18 Feb 2027. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "RideVolt Mobility GmbH",
+    "partner_id": "P013",
+    "product_id": "P013-B",
+    "product": "eBike Battery 504Wh",
+    "regulation": "EU Battery Regulation (EU) 2023/1542 - battery passport (Art. 77)",
+    "requirement": "LMT batteries must carry a digital battery passport (QR + data carrier).",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "gap": "eBike Battery 504Wh is an LMT battery sold in the EU with no digital battery passport or QR/data carrier, as required by Art. 77 of Reg (EU) 2023/1542.",
+    "deadline": "2027-02-18",
+    "severity": "high",
+    "recommended_action": "Create the EU battery passport (QR + data carrier) and link it before the 2027-02-18 deadline.",
+    "alert": {
+      "channel": "sms",
+      "to": "<your-test-number>",
+      "message": "RideVolt: your eBike Battery 504Wh needs EU Battery Regulation (EU) 2023/1542 by 18 Feb 2027. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "AeroSense Drones SARL",
+    "partner_id": "P017",
+    "product_id": "P017-A",
+    "product": "SkyScout Camera Drone",
+    "regulation": "REACH Regulation (EC) 1907/2006 - Annex XVII restriction (PFHxA group)",
+    "requirement": "Products with PFHxA-group coatings above 0.1% w/w must not be placed on the EU market.",
+    "source_url": "https://echa.europa.eu/candidate-list-table",
+    "gap": "SkyScout Camera Drone contains the PFAS/PFHxA group substance above 0.1% w/w, which is restricted under the REACH SVHC Candidate List.",
+    "deadline": "2027-03-15",
+    "severity": "high",
+    "recommended_action": "Remove the PFHxA-based coating or reformulate below 0.1% w/w and notify ECHA.",
+    "alert": {
+      "channel": "whatsapp",
+      "to": "<your-test-number>",
+      "message": "AeroSense: your SkyScout Camera Drone needs REACH Regulation (EC) 1907/2006 by 15 Mar 2027. Source: echa.europa.eu"
+    }
+  },
+  {
+    "company": "GlowToys Junior Sp. z o.o.",
+    "partner_id": "P019",
+    "product_id": "P019-A",
+    "product": "StarLite Night Toy",
+    "regulation": "Toy Safety Directive revision - stricter phthalate/DEHP limits for toy electronics",
+    "requirement": "Toy electronics must not contain DEHP above tightened phthalate limits for children's products.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065",
+    "gap": "StarLite Night Toy is a toy_electronic containing DEHP above 0.1% w/w, in violation of RoHS Annex II and REACH Annex XVII toy restrictions.",
+    "deadline": "2027-09-01",
+    "severity": "high",
+    "recommended_action": "Reformulate soft plastics to remove DEHP below 0.1% w/w and re-test before next production run.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "GlowToys: your StarLite Night Toy needs Toy Safety Directive revision by 1 Sep 2027. Reformulate soft plastics to remove DEHP below 0. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "GlowToys Junior Sp. z o.o.",
+    "partner_id": "P019",
+    "product_id": "P019-B",
+    "product": "MelodyPlush Toy",
+    "regulation": "Toy Safety Directive revision - stricter phthalate/DEHP limits for toy electronics",
+    "requirement": "Toy electronics must not contain DEHP above tightened phthalate limits for children's products.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065",
+    "gap": "MelodyPlush Toy is a toy_electronic containing DEHP above 0.1% w/w, in violation of RoHS Annex II and REACH Annex XVII toy restrictions.",
+    "deadline": "2027-09-01",
+    "severity": "high",
+    "recommended_action": "Reformulate soft plastics to remove DEHP below 0.1% w/w and re-test before next production run.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "GlowToys: your MelodyPlush Toy needs Toy Safety Directive revision by 1 Sep 2027. Reformulate soft plastics to remove DEHP below 0. Source: eur-lex.europa.eu"
+    }
+  },
+  {
+    "company": "KidVision Cams SARL",
+    "partner_id": "P022",
+    "product_id": "P022-A",
+    "product": "LittleView Baby Monitor",
+    "regulation": "RED Directive 2014/53/EU - common charger (Art. 3(4), Del. Reg. 2022/2380)",
+    "requirement": "Radio-enabled consumer electronics must use a USB-C charging port; micro-USB is no longer permitted.",
+    "source_url": "https://eur-lex.europa.eu/eli/reg_del/2022/2380/oj",
+    "gap": "LittleView Baby Monitor is a radio-enabled consumer device with a micro-USB charging port; USB-C is mandatory since 28 Dec 2024 under RED Del. Reg (EU) 2022/2380.",
+    "deadline": "2024-12-28",
+    "severity": "high",
+    "recommended_action": "Redesign the charging port to USB-C and re-certify under RED before placing new stock on the EU market.",
+    "alert": {
+      "channel": "email",
+      "to": "<your-test-number>",
+      "message": "KidVision: your LittleView Baby Monitor needs RED Directive 2014/53/EU by 28 Dec 2024. Source: eur-lex.europa.eu"
+    }
+  }
+]
